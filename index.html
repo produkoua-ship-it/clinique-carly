@@ -104,13 +104,22 @@
     }
 
     .nav-logo-icon {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      width: auto;
+      height: 54px;
+      background: transparent;
       border-radius: var(--radius-lg);
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+    }
+
+    .nav-logo-icon img {
+      width: auto;
+      height: 100%;
+      max-width: 200px;
+      object-fit: contain;
+      display: block;
     }
 
     .nav-logo-icon svg {
@@ -1731,6 +1740,33 @@
       .whyus-numbers {
         grid-template-columns: 1fr;
       }
+
+      /* === ÉQUIPE : 2 colonnes sur smartphone === */
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .team-photo {
+        aspect-ratio: 3/4;
+      }
+
+      .team-info {
+        padding: 0.75rem;
+      }
+
+      .team-info h3 {
+        font-size: 13px;
+        margin-bottom: 2px;
+      }
+
+      .team-info .specialty {
+        font-size: 11px;
+      }
+
+      .team-info .exp {
+        font-size: 10px;
+      }
     }
   </style>
 </head>
@@ -2482,7 +2518,7 @@
   </footer>
 
   <!-- FLOATING BUTTONS -->
-  <a href="https://wa.me/2252124605?text=Bonjour%2C+je+souhaite+des+informations+sur+le+Centre+M%C3%A9dical+Carly."
+  <a href="https://wa.me/2250779626279?text=Bonjour%2C+je+souhaite+des+informations+sur+la+Clinique+M%C3%A9dicale+Carly."
     target="_blank" class="fab-whatsapp" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24">
       <path
