@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Clinique Médicale Carly — Clinique Médicale à Votre région</title>
+  <meta name="description"
+    content="Clinique Médicale Carly à Votre région. Médecine générale, gynécologie, pédiatrie, chirurgie, cardiologie, laboratoire. Urgences 24h/24. Tél : 21 25 44 44." />
+  <meta name="keywords"
+    content="clinique Votre quartier Votre ville, médecin zone 4 Votre ville, Clinique Médicale Carly, gynécologie Votre ville, pédiatrie Votre ville, rendez-vous médical Votre ville" />
+  <meta property="og:title" content="Clinique Médicale Carly — Votre région" />
+  <meta property="og:description"
+    content="Votre centre médical de confiance à Votre quartier. Médecine générale, spécialités, urgences 24h/24." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://centre-medical-Carly.netlify.app" />
+  <link rel="icon" href="favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #d96d47;
+      --primary-container: #b34e2c;
+      --primary-light: #ffede8;
+      --secondary: #3c3c3c;
+      --secondary-fixed: #8c8c8c;
+      --secondary-light: #f0f0f0;
+      --background: #f7f9fc;
+      --surface-container-lowest: #ffffff;
+      --surface-container-low: #f2f4f7;
+      --surface-container: #eceef1;
+      --surface-container-high: #e6e8eb;
+      --surface-container-highest: #e0e3e6;
+      --surface-variant: #e0e3e6;
+      --on-surface: #191c1e;
+      --on-surface-variant: #40484d;
+      --outline-variant: #c2c6d3;
+      --error: #ba1a1a;
+      --font-display: 'Manrope', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 0.25rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --radius-2xl: 2rem;
+      --shadow-ambient: 0 8px 40px rgba(25, 28, 30, 0.06);
+      --shadow-float: 0 12px 50px rgba(25, 28, 30, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--on-surface);
+      background: var(--background);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* === NAVIGATION === */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(247, 249, 252, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .nav-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-logo-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span:first-child {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo-text span:last-child {
+      font-size: 11px;
+      color: var(--on-surface-variant);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--on-surface-variant);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-rdv-nav {
+      background: linear-gradient(135deg, var(--primary), var(--primary-container)) !important;
+      color: #fff !important;
+      padding: 12px 28px;
+      border-radius: var(--radius-lg);
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(217, 109, 71, 0.25);
+    }
+
+    .btn-rdv-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(217, 109, 71, 0.35) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--on-surface);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: var(--surface-container-lowest);
+      padding: 2rem;
+      z-index: 999;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: var(--shadow-float);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--on-surface);
+      font-size: 16px;
+      font-weight: 500;
+      padding: 16px 0;
+    }
+
+    .mobile-menu .btn-rdv-nav {
+      text-align: center;
+      margin-top: 16px;
+      display: block;
+      color: #fff !important;
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      min-height: 100vh;
+      background: var(--background);
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      overflow: hidden;
+    }
+
+    /* Image de fond qui couvre toute la section hero */
+    .hero-bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    .hero-bg-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Dégradé de fusion : opaque à gauche (couleur de fond), transparent à droite */
+    .hero-bg-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+          var(--background) 0%,
+          var(--background) 30%,
+          rgba(247, 249, 252, 0.92) 45%,
+          rgba(247, 249, 252, 0.5) 60%,
+          rgba(247, 249, 252, 0.1) 80%,
+          transparent 100%);
+    }
+
+    /* Dégradé vertical en bas pour fondre avec la section suivante */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--background));
+      z-index: 1;
+    }
+
+    .hero-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 560px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      padding: 8px 16px;
+      border-radius: var(--radius-lg);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--on-surface);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--on-surface-variant);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: var(--radius-lg);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 30px rgba(217, 109, 71, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(217, 109, 71, 0.35);
+    }
+
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface-container-lowest);
+      color: var(--on-surface);
+      padding: 16px 32px;
+      border-radius: var(--radius-lg);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-ambient);
+      outline: 1px solid rgba(194, 198, 211, 0.15);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-container-low);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--primary);
+    }
+
+    .hero-visual {
+      position: relative;
+      /* La colonne droite reste visible mais sans les images (maintenant en fond) */
+    }
+
+    .hero-img-main {
+      position: relative;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      /* On cache l'image principale car elle est maintenant en fond */
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .hero-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-img-float {
+      display: none;
+    }
+
+    .hero-img-float img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge-float {
+      position: absolute;
+      top: 20px;
+      right: -20px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 16px 24px;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-ambient);
+      z-index: 3;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .hero-badge-float .label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--on-surface-variant);
+      margin-bottom: 4px;
+    }
+
+    .hero-badge-float .value {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* === SECTION COMMONS === */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--on-surface);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--on-surface-variant);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header.center {
+      text-align: center;
+    }
+
+    .section-header.center .section-desc {
+      margin: 0 auto;
+    }
+
+    /* === SERVICES SECTION === */
+    .services-section {
+      background: var(--surface-container-low);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--surface-container-lowest);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-float);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--primary-light);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--primary);
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--on-surface);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--on-surface-variant);
+      line-height: 1.6;
+    }
+
+    /* === ABOUT/TEAM SECTION === */
+    .about-section {
+      background: var(--background);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-main {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-float);
+      aspect-ratio: 4/3;
+    }
+
+    .about-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-img-float {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 200px;
+      height: 200px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-float);
+      z-index: 2;
+    }
+
+    .about-img-float img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .about-stat {
+      background: var(--surface-container-low);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .about-stat .num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+
+    .about-stat .label {
+      font-size: 12px;
+      color: var(--on-surface-variant);
+      margin-top: 4px;
+    }
+
+    /* === TEAM SECTION === */
+    .team-section {
+      background: var(--surface-container-low);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-card {
+      background: var(--surface-container-lowest);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-float);
+    }
+
+    .team-photo {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .team-card:hover .team-photo img {
+      transform: scale(1.05);
+    }
+
+    .team-info {
+      padding: 1.5rem;
+    }
+
+    .team-info h3 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--on-surface);
+      margin-bottom: 4px;
+    }
+
+    .team-info .specialty {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .team-info .exp {
+      font-size: 12px;
+      color: var(--on-surface-variant);
+      margin-top: 4px;
+    }
+
+    /* === WHY US SECTION === */
+    .whyus-section {
+      background: var(--primary);
+    }
+
+    .whyus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .whyus-content .section-title {
+      color: #fff;
+    }
+
+    .whyus-content .section-label {
+      color: var(--secondary-fixed);
+    }
+
+    .whyus-content .section-desc {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .whyus-args {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .whyus-arg {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+    }
+
+    .whyus-arg-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: rgba(142, 244, 233, 0.2);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whyus-arg-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--secondary-fixed);
+    }
+
+    .whyus-arg h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .whyus-arg p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    .whyus-numbers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .whyus-num {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .whyus-num span {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+    }
+
+    .whyus-num p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 8px;
+    }
+
+    /* === REVIEWS SECTION === */
+    .reviews-section {
+      background: var(--background);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background: var(--surface-container-lowest);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .review-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: #f4a623;
+    }
+
+    .review-text {
+      font-size: 15px;
+      color: var(--on-surface-variant);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .review-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--on-surface);
+    }
+
+    .review-date {
+      font-size: 12px;
+      color: var(--on-surface-variant);
+      margin-top: 2px;
+    }
+
+    /* === RDV SECTION === */
+    .rdv-section {
+      background: var(--surface-container-low);
+    }
+
+    .rdv-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .rdv-info {
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      border-radius: var(--radius-2xl);
+      padding: 2.5rem;
+      color: #fff;
+      position: sticky;
+      top: 100px;
+    }
+
+    .rdv-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .rdv-info>p {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .rdv-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .rdv-contact-item svg {
+      width: 18px;
+      height: 18px;
+      fill: rgba(255, 255, 255, 0.7);
+      flex-shrink: 0;
+    }
+
+    .rdv-contact-item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .rdv-info-note {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      margin-top: 1.5rem;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .rdv-form {
+      background: var(--surface-container-lowest);
+      border-radius: var(--radius-2xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--on-surface);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--surface-container-highest);
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--on-surface);
+      border: none;
+      border-radius: var(--radius-md);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      box-shadow: inset 0 -2px 0 var(--primary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-lg);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 30px rgba(217, 109, 71, 0.25);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(217, 109, 71, 0.35);
+    }
+
+    .form-success {
+      display: none;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    /* === MAP SECTION === */
+    .map-section {
+      background: var(--background);
+    }
+
+    .map-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .map-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--on-surface);
+      margin-bottom: 1.25rem;
+    }
+
+    .map-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 1rem;
+      font-size: 14px;
+      color: var(--on-surface-variant);
+      line-height: 1.6;
+    }
+
+    .map-detail svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .map-embed {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      display: block;
+    }
+
+    /* === CONTACT SECTION === */
+    .contact-section {
+      background: var(--surface-container-low);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .contact-card {
+      background: var(--surface-container-lowest);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .contact-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .contact-card-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--primary);
+    }
+
+    .contact-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--on-surface);
+      margin-bottom: 8px;
+    }
+
+    .contact-card a {
+      font-size: 14px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .contact-card p {
+      font-size: 13px;
+      color: var(--on-surface-variant);
+      line-height: 1.5;
+    }
+
+    .horaires-table {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .horaires-table tr:not(:last-child) {}
+
+    .horaires-table td {
+      padding: 10px 4px;
+      font-size: 13px;
+    }
+
+    .horaires-table td:first-child {
+      color: var(--on-surface-variant);
+    }
+
+    .horaires-table td:last-child {
+      text-align: right;
+      font-weight: 500;
+      color: var(--on-surface);
+    }
+
+    .horaires-table tr.urgence td {
+      color: var(--error);
+      font-weight: 600;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--on-surface);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 12px 0 8px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .footer-social a:hover {
+      background: var(--primary);
+    }
+
+    .footer-social svg {
+      width: 18px;
+      height: 18px;
+      fill: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 12px;
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+    }
+
+    .footer-refontiq {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-refontiq a {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* === FLOATING BUTTONS === */
+    .fab-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .fab-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
+    }
+
+    .fab-whatsapp svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    .fab-top {
+      position: fixed;
+      bottom: 24px;
+      right: 100px;
+      z-index: 900;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-ambient);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      border: none;
+    }
+
+    .fab-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .fab-top svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    /* === CHATBOT === */
+    .chatbot-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-float);
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .chatbot-fab:hover {
+      transform: scale(1.1);
+    }
+
+    .chatbot-fab svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    .chatbot-window {
+      position: fixed;
+      bottom: 100px;
+      right: 24px;
+      z-index: 901;
+      width: 360px;
+      height: 480px;
+      background: var(--surface-container-lowest);
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-float);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(0.95) translateY(10px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .chatbot-window.open {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .chatbot-header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      padding: 1.25rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chatbot-header-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chatbot-header-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    .chatbot-header-info h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .chatbot-header-info p {
+      font-size: 11px;
+      opacity: 0.75;
+      margin: 2px 0 0;
+    }
+
+    .chatbot-close {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      opacity: 0.7;
+    }
+
+    .chatbot-close:hover {
+      opacity: 1;
+    }
+
+    .chatbot-msgs {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chatbot-msgs::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .chatbot-msgs::-webkit-scrollbar-thumb {
+      background: var(--outline-variant);
+      border-radius: 2px;
+    }
+
+    .msg {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: var(--radius-lg);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .msg.bot {
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      align-self: flex-start;
+      border-bottom-left-radius: var(--radius-sm);
+    }
+
+    .msg.user {
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: var(--radius-sm);
+    }
+
+    .msg.typing {
+      background: var(--surface-container-low);
+      align-self: flex-start;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .typing-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--on-surface-variant);
+      animation: typing 0.9s ease-in-out infinite;
+    }
+
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes typing {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-3px);
+      }
+    }
+
+    .chatbot-input {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      background: var(--surface-container-low);
+    }
+
+    .chatbot-input input {
+      flex: 1;
+      padding: 12px 16px;
+      background: var(--surface-container-lowest);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: 14px;
+      font-family: var(--font-body);
+      outline: none;
+    }
+
+    .chatbot-input input:focus {
+      box-shadow: inset 0 -2px 0 var(--primary);
+    }
+
+    .chatbot-send {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .chatbot-send:hover {
+      background: var(--primary-container);
+    }
+
+    .chatbot-send svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    /* === MOBILE STICKY === */
+    .mobile-sticky {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 800;
+      background: var(--surface-container-lowest);
+      padding: 12px 16px;
+      gap: 12px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-sticky a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px;
+      border-radius: var(--radius-lg);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .mobile-sticky .ms-rdv {
+      background: linear-gradient(135deg, var(--primary), var(--primary-container));
+      color: #fff;
+    }
+
+    .mobile-sticky .ms-call {
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+    }
+
+    .mobile-sticky svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .mobile-sticky .ms-rdv svg {
+      fill: #fff;
+    }
+
+    .mobile-sticky .ms-call svg {
+      fill: var(--primary);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 968px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      /* Adapter le dégradé pour mobile : du bas vers le haut + légèrement opaque */
+      .hero-bg-image::after {
+        background: linear-gradient(to bottom,
+            rgba(247, 249, 252, 0.15) 0%,
+            rgba(247, 249, 252, 0.7) 50%,
+            var(--background) 85%);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img-wrap {
+        display: none;
+      }
+
+      .whyus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .whyus-numbers {
+        order: -1;
+      }
+
+      .rdv-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .rdv-info {
+        position: static;
+      }
+
+      .map-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mobile-sticky {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 76px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .chatbot-window {
+        right: 12px;
+        left: 12px;
+        width: auto;
+        bottom: 90px;
+      }
+
+      section {
+        padding: 4rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .whyus-args {
+        grid-template-columns: 1fr;
+      }
+
+      .whyus-numbers {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon"><img src="logo.carly.jpg" alt="Clinique Carly Logo"
+            style="width:100%; height:100%; border-radius: var(--radius-lg); object-fit: cover; background: #fff;" />
+        </div>
+        <div class="nav-logo-text">
+          <span>Clinique Médicale Carly</span>
+          <span>Votre région</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#equipe">Équipe</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+        <a href="#rdv" class="btn-rdv-nav">Prendre rendez-vous</a>
+      </div>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" class="menu-link">Services</a>
+    <a href="#equipe" class="menu-link">Équipe</a>
+    <a href="#avis" class="menu-link">Avis Patients</a>
+    <a href="#rdv" class="menu-link">Rendez-vous</a>
+    <a href="#contact" class="menu-link">Contact</a>
+    <a href="#rdv" class="btn-rdv-nav menu-link">Prendre rendez-vous</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <!-- Image de fond qui fusionne avec le côté texte -->
+    <div class="hero-bg-image">
+      <img src="Carly.png" alt="Clinique Médicale Carly" />
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+          </svg>
+          Urgences 24h/24 · 7j/7
+        </div>
+        <h1 class="hero-title">Votre santé,<br>notre <span>priorité</span></h1>
+        <p class="hero-subtitle">Le Clinique Médicale Carly vous accueille à Votre quartier Zone 4 avec une équipe de
+          spécialistes
+          expérimentés pour des soins de qualité, dans un environnement moderne et chaleureux.</p>
+        <div class="hero-btns">
+          <a href="#rdv" class="btn-primary">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+            </svg>
+            Prendre rendez-vous
+          </a>
+          <a href="tel:+2252125444" class="btn-secondary">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            Nous appeler
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-main">
+          <img src="carly.png" alt="Clinique Médicale Carly - Équipe médicale" loading="eager" />
+        </div>
+        <div class="hero-img-float">
+          <img src="carly.png" alt="Ambiance clinique" loading="eager" />
+        </div>
+        <div class="hero-badge-float">
+          <div class="label">Années d'expérience</div>
+          <div class="value">20+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <div class="section-header center">
+        <span class="section-label">Nos Spécialités</span>
+        <h2 class="section-title">Des soins <span>complets</span> pour toute la famille</h2>
+        <p class="section-desc">Notre équipe pluridisciplinaire vous offre une prise en charge globale avec des
+          équipements médicaux de dernière génération.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
+            </svg></div>
+          <h3>Médecine Générale</h3>
+          <p>Consultations pour adultes et enfants, bilan de santé, suivi des maladies chroniques et prévention.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2zm0 12c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z" />
+            </svg></div>
+          <h3>Gynécologie-Obstétrique</h3>
+          <p>Suivi de grossesse, accouchements, consultations gynécologiques et préparation à la maternité.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M11 7H9V5H7v2H5v2h2v2h2V9h2zM19 5h-2v2h2zM19 9h-2v2h2zM7 19h10v-2H7zM15 5h-2v2h2zM5 15h14v-2H5zM5 11h2V9H5z" />
+            </svg></div>
+          <h3>Pédiatrie</h3>
+          <p>Consultations pédiatriques, suivi de la croissance, vaccination et soins pour nourrissons et enfants.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67C14.5 20.88 13.38 22 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5 0-.16-.08-.28-.14-.35-.41-.46-.63-1.05-.63-1.65 0-1.38 1.12-2.5 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z" />
+            </svg></div>
+          <h3>Dermatologie</h3>
+          <p>Diagnostic et traitement des maladies de la peau, acné, eczéma, allergies cutanées et soins esthétiques.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 17.93V18h-2v1.93C7.06 19.48 4.52 16.94 4.07 14H6v-2H4.07C4.52 9.06 7.06 6.52 10 6.07V8h2V6.07C16.94 6.52 19.48 9.06 19.93 12H18v2h1.93c-.45 2.94-2.99 5.48-5.93 5.93z" />
+            </svg></div>
+          <h3>Cardiologie</h3>
+          <p>Électrocardiogramme, échocardiographie, suivi cardiaque et prévention des maladies cardiovasculaires.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" />
+            </svg></div>
+          <h3>ORL</h3>
+          <p>Consultation oreilles, nez et gorge, audiométrie, traitement des sinusites et affections respiratoires.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+            </svg></div>
+          <h3>Ophtalmologie</h3>
+          <p>Examen de la vue, correction visuelle, traitement des affections oculaires et dépistage du glaucome.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M19.5 3.5L18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2 4.5 3.5 3 2v14c0 1.1.9 2 2 2h4.54c-.05-.32-.04-.66.04-1H5V4.57l1 .93 1.5-1.5L9 5l1.5-1.5L12 5l1.5-1.5L15 5l1.5-1.5L18 5l1-.93V18.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V2l-1.5 1.5zM16 11H8v-2h8v2zm0-4H8V5h8v2z" />
+            </svg></div>
+          <h3>Laboratoire d'Analyses</h3>
+          <p>Analyses biologiques complètes, résultats rapides, bilans sanguins et examens microbiologiques.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2z" />
+            </svg></div>
+          <h3>Chirurgie</h3>
+          <p>Interventions chirurgicales programmées et d'urgence, soins postopératoires et suivi de convalescence.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+            </svg></div>
+          <h3>Radiologie & Imagerie</h3>
+          <p>Radiographie, échographie, scanner et IRM pour un diagnostic précis et rapide.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M10.5 2c-2.5 0-4.5 2-4.5 4.5 0 .92.28 1.77.74 2.49L2 13.73 3.27 15l4.22-4.22c.5.22 1.03.35 1.61.35.32 0 .63-.04.93-.11L12 13c-.49.78-.75 1.63-.78 2.5H9.5v1.25l-1.25 1.25H6v2.5h14v-2.5h-2.25l-1.25-1.25V15h-1.72C15.5 13.51 14.14 12.5 12.5 12.5c-.1 0-.2.02-.3.02L10.03 10.4c.29-.56.47-1.19.47-1.9C10.5 6 12.5 4 15 4" />
+            </svg></div>
+          <h3>Hospitalisation</h3>
+          <p>Unité de 23 lits conventionnels et 8 lits de soins continus pour une prise en charge optimale.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+            </svg></div>
+          <h3>Urgences 24h/24</h3>
+          <p>Service d'urgences disponible 24h/24, 7j/7 avec médecin de garde permanent pour toute situation critique.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label">À Propos</span>
+          <h2 class="section-title">Une clinique <span>moderne</span> à votre service</h2>
+          <p class="section-desc">Depuis plus de 20 ans, le Clinique Médicale Carly est la référence médicale de Votre
+            quartier et
+            ses environs, alliant expertise, modernité et humanité.</p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="num">20+</span>
+              <span class="label">Années d'expérience</span>
+            </div>
+            <div class="about-stat">
+              <span class="num">10+</span>
+              <span class="label">Spécialités</span>
+            </div>
+            <div class="about-stat">
+              <span class="num">23</span>
+              <span class="label">Lits d'hospitalisation</span>
+            </div>
+            <div class="about-stat">
+              <span class="num">24/7</span>
+              <span class="label">Urgences</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-img-wrap">
+          <div class="about-img-main">
+            <img src="carly.png" alt="Clinique Médicale Carly - Locaux modernes" loading="lazy" />
+          </div>
+          <div class="about-img-float">
+            <img src="carly.png" alt="Équipe médicale" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section" id="equipe">
+    <div class="section-inner">
+      <div class="section-header center">
+        <span class="section-label">Notre Équipe</span>
+        <h2 class="section-title">Des médecins <span>dévoués</span> à votre santé</h2>
+        <p class="section-desc">Une équipe pluridisciplinaire de professionnels qualifiés à votre service.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="carly.png" alt="Dr Ghassan Fakhreddine" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3>Dr Ghassan Fakhreddine</h3>
+            <p class="specialty">Médecine Générale</p>
+            <p class="exp">Médecin référent · Visites à domicile</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="carly.png" alt="Dr Aminata Koné" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3>Dr Aminata Koné</h3>
+            <p class="specialty">Gynécologie-Obstétrique</p>
+            <p class="exp">Spécialiste · Suivi grossesse</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="carly.png" alt="Dr Sékou Ouattara" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3>Dr Sékou Ouattara</h3>
+            <p class="specialty">Pédiatrie</p>
+            <p class="exp">Spécialiste enfants · 0 à 18 ans</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="carly.png" alt="Dr Nathalie Brou" loading="lazy" />
+          </div>
+          <div class="team-info">
+            <h3>Dr Nathalie Brou</h3>
+            <p class="specialty">Dermatologie</p>
+            <p class="exp">Spécialiste · Dermato-esthétique</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="whyus-section">
+    <div class="section-inner">
+      <div class="whyus-grid">
+        <div class="whyus-content">
+          <span class="section-label">Pourquoi Nous Choisir</span>
+          <h2 class="section-title">La confiance <span style="color:var(--secondary-fixed)">bâtie</span> depuis 20 ans
+          </h2>
+          <p class="section-desc">Depuis plus de deux décennies, le Clinique Médicale Carly est la référence médicale de
+            Votre quartier et ses environs, alliant expertise, modernité et humanité.</p>
+          <div class="whyus-args">
+            <div class="whyus-arg">
+              <div class="whyus-arg-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg></div>
+              <div>
+                <h4>Équipements modernes</h4>
+                <p>Échographe, scanner, IRM, laboratoire complet</p>
+              </div>
+            </div>
+            <div class="whyus-arg">
+              <div class="whyus-arg-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg></div>
+              <div>
+                <h4>Médecins spécialistes</h4>
+                <p>10+ spécialités sous un même toit</p>
+              </div>
+            </div>
+            <div class="whyus-arg">
+              <div class="whyus-arg-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z" />
+                </svg></div>
+              <div>
+                <h4>Urgences 24h/24</h4>
+                <p>Médecin de garde présent toute la nuit</p>
+              </div>
+            </div>
+            <div class="whyus-arg">
+              <div class="whyus-arg-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z" />
+                </svg></div>
+              <div>
+                <h4>Paiement Mobile Money</h4>
+                <p>Wave, MTN MoMo, Orange Money CI acceptés</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="whyus-numbers">
+          <div class="whyus-num"><span>20+</span>
+            <p>Années d'expérience</p>
+          </div>
+          <div class="whyus-num"><span>23</span>
+            <p>Lits d'hospitalisation</p>
+          </div>
+          <div class="whyus-num"><span>10+</span>
+            <p>Spécialités médicales</p>
+          </div>
+          <div class="whyus-num"><span>8</span>
+            <p>Lits de soins continus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="avis">
+    <div class="section-inner">
+      <div class="section-header center">
+        <span class="section-label">Avis Patients</span>
+        <h2 class="section-title">Ils nous font <span>confiance</span></h2>
+        <p class="section-desc">La satisfaction de nos patients est notre plus grande récompense.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <p class="review-text">"Le centre médical est très bien. Mes analyses sont revenues rapidement et elles m'ont
+            été expliquées par le docteur. Je suis très satisfaite. Personnel chaleureux."</p>
+          <div class="review-author">
+            <div class="review-avatar"
+              style="background: linear-gradient(135deg, var(--primary), var(--primary-container))">AK</div>
+            <div>
+              <div class="review-name">Adjoua Kouassi</div>
+              <div class="review-date">Patiente · Il y a 2 mois</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <p class="review-text">"Bon centre médical. Les soins sont bien effectués. J'ai accouché ici et l'équipe de
+            gynécologie est très professionnelle. Je recommande vivement Carly."</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #f4a623, #e83845)">FD</div>
+            <div>
+              <div class="review-name">Fatoumata Diabaté</div>
+              <div class="review-date">Patiente · Il y a 1 mois</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24" style="fill: var(--on-surface-variant)">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <p class="review-text">"Service d'urgences très réactif. Mon fils a été pris en charge rapidement à 2h du
+            matin. Personnel attentionné et compétent. Merci à toute l'équipe de Carly!"</p>
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, var(--secondary), var(--primary))">KO
+            </div>
+            <div>
+              <div class="review-name">Konan Ohoueu</div>
+              <div class="review-date">Patient · Il y a 3 semaines</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RDV -->
+  <section id="rdv" class="rdv-section">
+    <div class="section-inner">
+      <div class="section-header center">
+        <span class="section-label">Prise de Rendez-vous</span>
+        <h2 class="section-title">Réservez votre <span>consultation</span></h2>
+        <p class="section-desc">Remplissez le formulaire ci-dessous. Votre demande sera transmise directement via
+          WhatsApp.</p>
+      </div>
+      <div class="rdv-inner">
+        <div class="rdv-info">
+          <h3>Contact Direct</h3>
+          <p>Préférez-vous nous appeler ? Nous sommes disponibles :</p>
+          <div class="rdv-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:+2250779626279">0779626279</a>
+          </div>
+          <div class="rdv-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.43c-.09.334.233.656.567.567l5.618-1.484A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 0 1-5.006-1.373l-.36-.214-3.723.984.995-3.63-.235-.374A9.804 9.804 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+            </svg>
+            <a href="https://wa.me/2250779626279" target="_blank">WhatsApp : 0779626279</a>
+          </div>
+          <div class="rdv-contact-item">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+            <a href="mailto:centremedicalCarly@yahoo.fr">centremedicalCarly@yahoo.fr</a>
+          </div>
+          <div class="rdv-info-note">
+            📅 <strong>Horaires consultations :</strong><br>
+            Lun – Ven : 08h00 – 17h00<br>
+            Samedi : 08h00 – 12h00<br>
+            🚨 <strong>Urgences :</strong> 24h/24 · 7j/7
+          </div>
+          <div style="margin-top: 20px; font-size: 13px; opacity: 0.85;">
+            <strong>💳 Modes de paiement :</strong><br>
+            Wave · MTN MoMo · Orange Money · Espèces
+          </div>
+        </div>
+        <div class="rdv-form">
+          <form id="rdvForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nom">Nom complet *</label>
+                <input type="text" id="nom" placeholder="Ex : Kouassi Jean" required />
+              </div>
+              <div class="form-group">
+                <label for="tel">Téléphone *</label>
+                <input type="tel" id="tel" placeholder="Ex : 07 00 00 00 00" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service souhaité *</label>
+              <select id="service" required>
+                <option value="">Choisir un service...</option>
+                <option>Médecine Générale</option>
+                <option>Gynécologie-Obstétrique</option>
+                <option>Pédiatrie</option>
+                <option>Dermatologie</option>
+                <option>Cardiologie</option>
+                <option>ORL</option>
+                <option>Ophtalmologie</option>
+                <option>Chirurgie</option>
+                <option>Laboratoire d'Analyses</option>
+                <option>Radiologie & Imagerie</option>
+                <option>Urgences</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Date souhaitée *</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="form-group">
+              <label for="motif">Motif / Message</label>
+              <textarea id="motif" placeholder="Décrivez brièvement votre motif de consultation..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              Envoyer via WhatsApp &nbsp;
+              <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff;vertical-align:middle">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.43c-.09.334.233.656.567.567l5.618-1.484A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 0 1-5.006-1.373l-.36-.214-3.723.984.995-3.63-.235-.374A9.804 9.804 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+              </svg>
+            </button>
+            <div class="form-success" id="formSuccess">✅ Merci ! Votre demande a été envoyée sur WhatsApp. Nous vous
+              contacterons sous peu.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section" id="localisation">
+    <div class="section-inner">
+      <div class="section-header center">
+        <span class="section-label">Localisation</span>
+        <h2 class="section-title">Nous <span>trouver</span></h2>
+      </div>
+      <div class="map-inner">
+        <div class="map-info">
+          <h3>Clinique Médicale Carly</h3>
+          <div class="map-detail">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+            <div>Rue Pierre et Marie Curie, au sein du centre commercial Carly Center, Zone 4C, Votre quartier, Votre
+              ville – au
+              pied de l'échangeur du Pont Henri Konan Bédié</div>
+          </div>
+          <div class="map-detail">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+            </svg>
+            <div><strong>Repères :</strong> À l'intérieur du Carly Center (galerie commerciale), Votre quartier Zone 4.
+              Proche
+              du pont Henri Konan Bédié et du carrefour Votre quartier.</div>
+          </div>
+          <div class="map-detail">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            <a href="tel:+2252125444" style="color: var(--primary); font-weight: 600; text-decoration: none;">21 25 44
+              44</a>
+          </div>
+          <div class="map-detail">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z" />
+            </svg>
+            <div>Boîte Postale : 26 BP 809 Votre ville 26</div>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <a href="https://www.google.com/maps/search/Centre+Medical+Carly+Votre quartier+Zone4+Votre ville"
+              target="_blank"
+              style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; padding: 14px 24px; border-radius: var(--radius-lg); text-decoration: none; font-size: 14px; font-weight: 600;">
+              <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #fff;">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              Ouvrir dans Google Maps
+            </a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.0428!2d-3.9979!3d5.3004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCarly+Center+Votre quartier+Zone+4+Votre ville!5e0!3m2!1sfr!2sci!4v1000000000000"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation Clinique Médicale Carly"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <div class="section-header center">
+        <span class="section-label">Contactez-nous</span>
+        <h2 class="section-title">Toujours <span>disponibles</span> pour vous</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg></div>
+          <h4>Téléphone</h4>
+          <a href="tel:+2250779626279">0779626279</a>
+          <p>Du lundi au samedi</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon" style="background: var(--secondary-light);"><svg viewBox="0 0 24 24"
+              style="fill: var(--secondary);">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.43c-.09.334.233.656.567.567l5.618-1.484A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 0 1-5.006-1.373l-.36-.214-3.723.984.995-3.63-.235-.374A9.804 9.804 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+            </svg></div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/2250779626279?text=Bonjour%2C+je+souhaite+des+informations+sur+le+Centre+M%C3%A9dical+Carly."
+            target="_blank" style="color: var(--secondary);">0779626279</a>
+          <p>Réponse rapide garantie</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg></div>
+          <h4>Email</h4>
+          <a href="mailto:centremedicalCarly@yahoo.fr">centremedicalCarly@yahoo.fr</a>
+          <p>Réponse sous 24h</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+            </svg></div>
+          <h4>Horaires d'ouverture</h4>
+          <table class="horaires-table">
+            <tr>
+              <td>Lun – Ven</td>
+              <td>08h00 – 17h00</td>
+            </tr>
+            <tr>
+              <td>Samedi</td>
+              <td>08h00 – 12h00</td>
+            </tr>
+            <tr>
+              <td>Dimanche</td>
+              <td>Urgences seulement</td>
+            </tr>
+            <tr class="urgence">
+              <td>🚨 Urgences</td>
+              <td>24h/24 · 7j/7</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="nav-logo-icon"><img src="logo.carly.jpg" alt="Clinique Carly Logo"
+                style="width:100%; height:100%; border-radius: var(--radius-lg); object-fit: cover; background: #fff;" />
+            </div>
+          </div>
+          <h3>Clinique Médicale Carly</h3>
+          <p>Votre centre de santé de référence à Votre région. Soins de qualité, équipe expérimentée,
+            urgences 24h/24.</p>
+          <p style="margin-top: 12px; font-size: 12px;">Rue Pierre et Marie Curie, Carly Center, Zone 4C, Votre
+            quartier,
+            Votre ville</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/p/Centre-M%C3%A9dical-Carly-100054339708743/" target="_blank"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#services">Nos Services</a>
+          <a href="#equipe">Notre Équipe</a>
+          <a href="#avis">Avis Patients</a>
+          <a href="#rdv">Rendez-vous</a>
+          <a href="#localisation">Localisation</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Médecine Générale</a>
+          <a href="#services">Gynécologie</a>
+          <a href="#services">Pédiatrie</a>
+          <a href="#services">Cardiologie</a>
+          <a href="#services">Urgences 24h/24</a>
+          <a href="#rdv">Prendre RDV</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Clinique Médicale Carly · Tous droits réservés</p>
+        <p class="footer-refontiq">Site réalisé par <a href="tel:+22501003729000">Refontiq · +225 01 00 37 29 00</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/2252125444?text=Bonjour%2C+je+souhaite+des+informations+sur+le+Centre+M%C3%A9dical+Carly."
+    target="_blank" class="fab-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.43c-.09.334.233.656.567.567l5.618-1.484A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.804 9.804 0 0 1-5.006-1.373l-.36-.214-3.723.984.995-3.63-.235-.374A9.804 9.804 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+    </svg>
+  </a>
+  <button class="fab-top" id="fabTop" aria-label="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+  </button>
+
+  <!-- CHATBOT -->
+  <button class="chatbot-fab" id="chatbotFab" aria-label="Assistant virtuel">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+    </svg>
+  </button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <div class="chatbot-header-icon"><svg viewBox="0 0 24 24" style="fill: #fff; width: 20px; height: 20px;">
+          <path d="M10 3h4v5h5v4h-5v5h-4v-5H5V8h5z" />
+        </svg></div>
+      <div class="chatbot-header-info">
+        <h4>Assistant Carly 🏥</h4>
+        <p>En ligne · Répond en quelques secondes</p>
+      </div>
+      <button class="chatbot-close" id="chatbotClose">✕</button>
+    </div>
+    <div class="chatbot-msgs" id="chatbotMsgs"></div>
+    <div class="chatbot-input">
+      <input type="text" id="chatbotInput" placeholder="Posez votre question..." />
+      <button class="chatbot-send" id="chatbotSend" aria-label="Envoyer">
+        <svg viewBox="0 0 24 24">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE STICKY -->
+  <div class="mobile-sticky">
+    <a href="#rdv" class="ms-rdv">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2z" />
+      </svg>
+      Rendez-vous
+    </a>
+    <a href="tel:+2252125444" class="ms-call">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+      Appeler
+    </a>
+  </div>
+
+  <script>
+    // NAV SCROLL
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+      document.getElementById('fabTop').classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+
+    // HAMBURGER
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.menu-link').forEach(l => {
+      l.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); });
+    });
+
+    // RDV FORM
+    document.getElementById('rdvForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nom = document.getElementById('nom').value.trim();
+      const tel = document.getElementById('tel').value.trim();
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+      const motif = document.getElementById('motif').value.trim();
+      if (!nom || !tel || !service || !date) {
+        alert('Veuillez remplir tous les champs obligatoires (*)');
+        return;
+      }
+      const msg = `Bonjour, je souhaite prendre RDV au Clinique Médicale Carly.%0ANom : ${encodeURIComponent(nom)}%0ATél : ${encodeURIComponent(tel)}%0AService : ${encodeURIComponent(service)}%0ADate souhaitée : ${encodeURIComponent(date)}${motif ? '%0AMotif : ' + encodeURIComponent(motif) : ''}`;
+      window.open(`https://wa.me/2252125444?text=${msg}`, '_blank');
+      document.getElementById('formSuccess').classList.add('show');
+      setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 5000);
+    });
+
+    // CHATBOT
+    const GEMINI_KEY = 'AIzaSyDu-aX2owHqU04oHdrhWKmWr7jDOm1axfU';
+    const SYSTEM_PROMPT = `Tu es l'assistant virtuel du Clinique Médicale Carly, une clinique médicale à Votre région, Côte d'Ivoire. Tu réponds uniquement en français, de façon cordiale, professionnelle et concise. Tu aides les patients avec : les horaires, les services proposés, la prise de rendez-vous, la localisation, les médecins disponibles et les urgences.
+
+Informations de la clinique :
+- Nom : Clinique Médicale Carly
+- Adresse : Rue Pierre et Marie Curie, au sein du Carly Center, Zone 4C, Votre quartier, Votre ville. Au pied de l'échangeur du Pont Henri Konan Bédié.
+- Téléphone : 21 25 44 44
+- Email : centremedicalCarly@yahoo.fr
+- Horaires : Lundi au Vendredi 8h-17h, Samedi 8h-12h
+- Urgences : 24h/24 · 7j/7, médecin de garde permanent
+- Services : Médecine générale, Gynécologie-Obstétrique (accouchements), Pédiatrie, Dermatologie, Cardiologie, ORL, Ophtalmologie, Chirurgie, Radiologie & Imagerie (échographie, scanner, IRM, radio), Laboratoire d'analyses médicales, Hospitalisation (23 lits conventionnels + 8 lits soins continus)
+- Médecins : Dr Ghassan Fakhreddine (Médecin généraliste, visites à domicile)
+- Paiement : Wave, MTN MoMo, Orange Money, Espèces
+- Créé il y a plus de 20 ans
+
+Pour toute demande de rendez-vous, invite le patient à utiliser le formulaire sur le site ou à contacter directement la clinique par WhatsApp ou téléphone. Pour les urgences vitales, donne immédiatement le numéro : 21 25 44 44 et le SAMU Côte d'Ivoire : 185. Ne réponds jamais à des questions hors sujet médical ou non liées à la clinique. Limite tes réponses à 3 phrases maximum sauf si plus de détails sont nécessaires.`;
+
+    let chatHistory = [];
+    let chatOpen = false;
+
+    function addMsg(text, role) {
+      const msgs = document.getElementById('chatbotMsgs');
+      const div = document.createElement('div');
+      div.className = `msg ${role}`;
+      div.textContent = text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+      return div;
+    }
+
+    function showTyping() {
+      const msgs = document.getElementById('chatbotMsgs');
+      const div = document.createElement('div');
+      div.className = 'msg typing';
+      div.id = 'typingIndicator';
+      div.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function removeTyping() {
+      const t = document.getElementById('typingIndicator');
+      if (t) t.remove();
+    }
+
+    async function sendMsg() {
+      const input = document.getElementById('chatbotInput');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      addMsg(text, 'user');
+      chatHistory.push({ role: 'user', parts: [{ text }] });
+      showTyping();
+      try {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: chatHistory,
+            systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+            generationConfig: { maxOutputTokens: 300, temperature: 0.7 }
+          })
+        });
+        const data = await res.json();
+        removeTyping();
+        const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'Désolé, je suis temporairement indisponible. Contactez-nous directement : 21 25 44 44';
+        addMsg(reply, 'bot');
+        chatHistory.push({ role: 'model', parts: [{ text: reply }] });
+      } catch (err) {
+        removeTyping();
+        addMsg('Désolé, je suis temporairement indisponible. Contactez-nous sur WhatsApp ou au 21 25 44 44.', 'bot');
+      }
+    }
+
+    document.getElementById('chatbotFab').addEventListener('click', () => {
+      chatOpen = !chatOpen;
+      document.getElementById('chatbotWindow').classList.toggle('open', chatOpen);
+      if (chatOpen && document.getElementById('chatbotMsgs').children.length === 0) {
+        setTimeout(() => addMsg('Bonjour 👋 Je suis l\'assistant virtuel du Clinique Médicale Carly. Comment puis-je vous aider ? (horaires, services, rendez-vous...)', 'bot'), 300);
+      }
+    });
+
+    document.getElementById('chatbotClose').addEventListener('click', () => {
+      chatOpen = false;
+      document.getElementById('chatbotWindow').classList.remove('open');
+    });
+
+    document.getElementById('chatbotSend').addEventListener('click', sendMsg);
+    document.getElementById('chatbotInput').addEventListener('keydown', e => { if (e.key === 'Enter') sendMsg(); });
+  </script>
+</body>
+
+</html>
